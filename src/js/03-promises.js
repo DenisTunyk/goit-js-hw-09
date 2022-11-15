@@ -20,7 +20,8 @@ function sendSubmitForm(e) {
   e.preventDefault();
   const count = ref.amountEl.value;
   for (let i = 1; i <= count; i += 1){
-    createPromise(i, Number(ref.delayEl.value) + Number(ref.stepEl.value * (i-1)));
+    createPromise(i, Number(ref.delayEl.value) + Number(ref.stepEl.value * (i - 1)));
+    //console.log(Number(ref.delayEl.value) + Number(ref.stepEl.value * (i - 1)));
     //console.log(Number(ref.delayEl.value) + Number(ref.stepEl.value * (i-1)));
     
   }

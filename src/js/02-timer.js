@@ -38,8 +38,8 @@ const timer = {
 
         this.inId = setInterval(() => {
             const date = new Date();
-            let deltaTime = timerFinish - date.getTime();
-            this.isActive = deltaTime > 0 ? true : false;
+            //let deltaTime = timerFinish - date.getTime();
+            this.isActive = timerFinish - date.getTime() > 0 ? true : false;
 
             if (!this.isActive) {
                 clearInterval(this.inId);
